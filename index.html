@@ -3,10 +3,23 @@
 <html class="dark" lang="ko"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Weplace - First Surface Prologue</title>
+<title>Weplace - First Surface</title>
+<!-- [SCAFFOLD: metadata] description / canonical / Open Graph. 도메인과 og:image 경로는 TO CONFIRM 플레이스홀더. -->
+<meta name="description" content="흩어진 매장 정보를 하나의 매장처럼 읽히게 정리합니다. 네이버·구글·홈페이지·리뷰·SNS·AI 검색에 흩어진 '첫 화면'을 진단하고, 고객이 멈추는 지점과 먼저 손볼 순서를 남깁니다."/>
+<link href="https://www.weplace.kr/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="ko_KR" property="og:locale"/>
+<meta content="Weplace — First Surface" property="og:title"/>
+<meta content="흩어진 매장 정보를 하나의 매장처럼 읽히게 정리합니다. 고객이 멈추는 자리부터 봅니다." property="og:description"/>
+<meta content="https://www.weplace.kr/" property="og:url"/>
+<meta content="https://www.weplace.kr/assets/img/weplace-og-cover.jpg" property="og:image"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- [FONT: design.md §5] Nanum Myeongjo (headline) · EB Garamond (editorial label) · Pretendard (body/UI). 방식 A: CDN 로드. -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;family=Nanum+Myeongjo:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
@@ -76,125 +89,79 @@
                       "gutter": "24px"
               },
               "fontFamily": {
-                      "body-md": [
-                              "hankenGrotesk", "sans-serif"
-                      ],
-                      "headline-md": [
-                              "notoSerif", "serif"
-                      ],
-                      "headline-lg": [
-                              "notoSerif", "serif"
-                      ],
-                      "headline-lg-mobile": [
-                              "notoSerif", "serif"
-                      ],
-                      "body-lg": [
-                              "hankenGrotesk", "sans-serif"
-                      ],
-                      "display-xl": [
-                              "notoSerif", "serif"
-                      ],
-                      "display-xl-mobile": [
-                              "notoSerif", "serif"
-                      ],
-                      "label-sm": [
-                              "hankenGrotesk", "sans-serif"
-                      ]
+                      "body-md": ["Pretendard Variable", "Pretendard", "-apple-system", "BlinkMacSystemFont", "system-ui", "Apple SD Gothic Neo", "sans-serif"],
+                      "headline-md": ["Nanum Myeongjo", "serif"],
+                      "headline-lg": ["Nanum Myeongjo", "serif"],
+                      "headline-lg-mobile": ["Nanum Myeongjo", "serif"],
+                      "body-lg": ["Pretendard Variable", "Pretendard", "-apple-system", "BlinkMacSystemFont", "system-ui", "Apple SD Gothic Neo", "sans-serif"],
+                      "display-xl": ["Nanum Myeongjo", "serif"],
+                      "display-xl-mobile": ["Nanum Myeongjo", "serif"],
+                      "label-sm": ["Pretendard Variable", "Pretendard", "-apple-system", "BlinkMacSystemFont", "system-ui", "Apple SD Gothic Neo", "sans-serif"],
+                      "editorial": ["EB Garamond", "Nanum Myeongjo", "serif"]
               },
               "fontSize": {
-                      "body-md": [
-                              "16px",
-                              {
-                                      "lineHeight": "28px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-md": [
-                              "32px",
-                              {
-                                      "lineHeight": "40px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-lg": [
-                              "48px",
-                              {
-                                      "lineHeight": "60px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-lg-mobile": [
-                              "32px",
-                              {
-                                      "lineHeight": "40px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "body-lg": [
-                              "18px",
-                              {
-                                      "lineHeight": "32px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "display-xl": [
-                              "80px",
-                              {
-                                      "lineHeight": "96px",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "display-xl-mobile": [
-                              "48px",
-                              {
-                                      "lineHeight": "56px",
-                                      "letterSpacing": "-0.01em",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "label-sm": [
-                              "12px",
-                              {
-                                      "lineHeight": "16px",
-                                      "letterSpacing": "0.1em",
-                                      "fontWeight": "600"
-                              }
-                      ]
+                      "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "60px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "display-xl": ["80px", {"lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "display-xl-mobile": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}]
               }
-      },
+            },
           },
         }
     </script>
 <style>
         body {
-            background-color: #100C0A; /* Fixed base background */
-            transition: background-color 2s ease-in-out;
+            background-color: #080605;
+            transition: background-color 1.2s ease-in-out;
             margin: 0;
             overflow-x: hidden;
-            font-family: 'Hanken Grotesk', sans-serif;
+            /* [FONT] Hanken Grotesk → Pretendard (design.md body/UI 역할) */
+            font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', sans-serif;
             color: #f1dfd1;
+            word-break: keep-all;
         }
 
-        /* Top NavBar from JSON */
+        /* [SCAFFOLD: skip link] 포커스 전에는 화면 밖, Tab 포커스 시에만 노출. 기본 렌더에는 영향 없음. */
+        .skip-link {
+            position: absolute;
+            left: 0;
+            top: -120px;
+            z-index: 200;
+            background: #edbf7b;
+            color: #080605;
+            padding: 12px 24px;
+            font-weight: 600;
+            transition: top 0.2s ease;
+        }
+        .skip-link:focus { top: 0; }
+
+        /* [SCAFFOLD: anchor] 라우트 맵 앵커 타깃. 높이 0, 비가시. 고정 내비 높이만큼 스크롤 오프셋. */
+        .section-anchor { display: block; height: 0; scroll-margin-top: 96px; }
+
         .top-navbar {
-            background-color: rgba(26, 18, 9, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(155, 143, 128, 0.3); /* outline/30 */
+            background-color: rgba(8, 6, 5, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(155, 143, 128, 0.1);
         }
 
         .ivory-theme {
-            background-color: #F3ECDF !important;
-            color: #100C0A !important;
+            background-color: #F8F5F0 !important;
+            color: #1a1209 !important;
         }
 
-        .ivory-theme .on-surface-text {
-            color: #100C0A !important;
-        }
-
+        .ivory-theme .on-surface-text { color: #1a1209 !important; }
         .ivory-theme .top-navbar {
-            background-color: rgba(243, 236, 223, 0.8);
-            border-bottom: 1px solid rgba(94, 82, 71, 0.3);
+            background-color: rgba(248, 245, 240, 0.85);
+            border-bottom: 1px solid rgba(94, 82, 71, 0.1);
+        }
+        
+        .charcoal-theme {
+            background-color: #1a1209 !important;
+            color: #f1dfd1 !important;
         }
 
         .scene-container {
@@ -205,8 +172,8 @@
             align-items: center;
             position: relative;
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1), transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.2, 1, 0.3, 1), transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
         }
 
         .scene-container.is-visible {
@@ -214,193 +181,573 @@
             transform: translateY(0);
         }
 
-        /* Overload Scene Styles */
         .speech-bubble-mass {
             position: relative;
             width: 100%;
-            max-width: 800px;
-            height: 600px;
+            max-width: 1100px;
+            height: 700px;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Simulating the bubble shape via layout */
-            clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 60% 80%, 50% 100%, 40% 80%, 0% 80%);
-            transition: transform 2s ease-out, opacity 2s ease-out;
         }
 
         .text-fragment {
             position: absolute;
             white-space: nowrap;
-            transition: all 1s ease-in-out;
+            transition: transform 0.1s ease-out, opacity 1s ease-in-out;
+            pointer-events: none;
         }
 
-        .text-fragment.faint { opacity: 0.1; filter: blur(4px); font-size: 0.8rem; }
-        .text-fragment.medium { opacity: 0.4; filter: blur(2px); font-size: 1.2rem; }
-        .text-fragment.clear { opacity: 0.8; filter: blur(0); font-size: 1.5rem; font-weight: 300; }
-        .text-fragment.afterimage { opacity: 0.06; filter: blur(8px); font-size: 2rem; }
+        .text-fragment.faint { opacity: 0.12; filter: blur(4px); font-size: 0.85rem; }
+        .text-fragment.medium { opacity: 0.3; filter: blur(1.5px); font-size: 1.2rem; }
+        .text-fragment.clear { opacity: 0.6; filter: blur(0); font-size: 1.5rem; font-weight: 300; }
+        .text-fragment.residue { opacity: 0.05; font-size: 2rem; filter: blur(8px); }
 
         .central-sentence {
             position: relative;
             z-index: 10;
-            font-size: 2.5rem;
-            line-height: 1.4;
             text-align: center;
-            color: #c49a5a; /* Gold highlight */
-            font-family: 'Noto Serif', serif;
-            text-shadow: 0 0 20px rgba(16, 12, 10, 0.9);
-            padding: 2rem;
-            background: radial-gradient(circle, rgba(16,12,10,0.8) 0%, rgba(16,12,10,0) 80%);
+            color: #edbf7b;
+            /* [FONT] Noto Serif → Nanum Myeongjo (design.md headline/사유 문장 역할) */
+            font-family: 'Nanum Myeongjo', serif;
+            padding: 3rem;
+            background: radial-gradient(circle, rgba(8,6,5,0.9) 0%, rgba(8,6,5,0) 80%);
+            opacity: 0;
         }
+        
+        .central-sentence.active {
+            animation: fadeInReveal 2s 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes fadeInReveal {
+            to { opacity: 1; transform: scale(1.02); }
+        }
+
+        .spacer { height: 60vh; }
+        .spacer-sm { height: 30vh; }
+
+        .diagnostic-list-item {
+            border-bottom: 1px solid rgba(155, 143, 128, 0.1);
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            transition: all 0.5s ease;
+            position: relative;
+        }
+        .diagnostic-list-item .question {
+            position: absolute;
+            right: 0;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.4s ease;
+            color: #c49a5a;
+            font-style: italic;
+        }
+        .diagnostic-list-item:hover {
+            padding-left: 1.5rem;
+            border-bottom-color: #c49a5a;
+        }
+        .diagnostic-list-item:hover .question {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .surfaces-baseline {
+            position: absolute;
+            width: 0;
+            height: 1px;
+            background: #c49a5a;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: width 1.5s cubic-bezier(0.6, 0, 0.4, 1), opacity 0.5s;
+        }
+        .surfaces-container.is-aligned .surfaces-baseline {
+            width: 80%;
+            opacity: 0.3;
+        }
+        .surface-label { transition: transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        
+        #archive-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.8s ease, filter 0.8s ease;
+            filter: grayscale(100%) brightness(0.3);
+        }
+
+        .archive-item:hover ~ .archive-item { opacity: 0.3; filter: blur(2px); }
+        .archive-list:hover .archive-item:not(:hover) { opacity: 0.3; filter: blur(2px); }
+
+        .gate-card {
+            flex: 1;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(155, 143, 128, 0.1);
+            transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .gate-card:hover {
+            flex: 1.5;
+            background: rgba(248, 245, 240, 0.05);
+            border-color: #edbf7b;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background: #1a1209;
+            z-index: 100;
+            padding: 100px 40px;
+            transition: right 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+        }
+        .mobile-menu.open { right: 0; }
 
         @media (max-width: 768px) {
-            .central-sentence { font-size: 1.5rem; }
-            .speech-bubble-mass { height: 400px; }
+            .diagnostic-list-item .question {
+                position: static;
+                opacity: 0.7;
+                transform: none;
+                margin-top: 0.5rem;
+                display: block;
+                font-size: 0.9rem;
+            }
+            .diagnostic-list-item { flex-direction: column; align-items: flex-start; gap: 0; }
         }
-
-        /* Scroll trigger helper */
-        .spacer { height: 50vh; }
     </style>
 </head>
 <body class="antialiased">
-<!-- TopNavBar -->
-<nav class="top-navbar fixed top-0 w-full flex justify-between items-center px-margin-desktop py-4 z-50 transition-colors duration-1000">
-<div class="font-headline-md text-headline-md font-normal on-surface-text text-on-surface">Weplace</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Diagnostic</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Thesis</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Archive</a>
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#">Collective</a>
+<!-- [SCAFFOLD: skip link] 키보드 사용자가 내비를 건너뛰고 본문으로 이동 -->
+<a class="skip-link" href="#main-content">메인 콘텐츠로 건너뛰기</a>
+<!-- Navigation -->
+<nav class="top-navbar fixed top-0 w-full flex justify-between items-center px-margin-desktop py-4 z-50">
+<div class="font-headline-md text-2xl md:text-headline-md font-normal on-surface-text text-on-surface">Weplace</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="/diagnosis/">Diagnosis</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="/cases/">Cases</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="/webtoon/">Webtoon</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="/essay/">Essay</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="/about/">About</a>
 </div>
-<button class="hidden md:block px-6 py-2 border border-primary-container text-primary-container hover:bg-primary-container hover:text-background transition-colors duration-300 font-label-sm text-label-sm uppercase tracking-widest">
+<div class="flex items-center gap-6">
+<button class="hidden md:block px-6 py-2 border border-primary-container text-primary-container hover:bg-primary-container hover:text-background transition-all duration-300 font-label-sm text-label-sm uppercase tracking-widest">
             Inquiry
         </button>
-<!-- Mobile Menu Icon -->
-<span class="material-symbols-outlined md:hidden text-on-surface on-surface-text cursor-pointer">menu</span>
+<span class="material-symbols-outlined md:hidden text-on-surface cursor-pointer text-3xl" id="menu-toggle">menu</span>
+</div>
 </nav>
-<div id="scroll-wrapper">
-<!-- Scene 01-04: The Overload -->
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu flex flex-col gap-8 shadow-2xl" id="mobile-overlay">
+<div class="flex justify-end mb-8">
+<span class="material-symbols-outlined text-on-surface cursor-pointer text-4xl" id="menu-close">close</span>
+</div>
+<a class="text-3xl font-headline-md text-on-surface" href="/diagnosis/">Diagnosis</a>
+<a class="text-3xl font-headline-md text-on-surface" href="/cases/">Cases</a>
+<a class="text-3xl font-headline-md text-on-surface" href="/webtoon/">Webtoon</a>
+<a class="text-3xl font-headline-md text-on-surface" href="/essay/">Essay</a>
+<a class="text-3xl font-headline-md text-on-surface" href="/about/">About</a>
+<div class="mt-auto">
+<button class="w-full py-4 border border-primary text-primary font-label-sm uppercase tracking-widest">Inquiry</button>
+</div>
+</div>
+<!-- [SCAFFOLD: main landmark] 기존 #scroll-wrapper(div) → main. 어떤 CSS/JS도 scroll-wrapper를 참조하지 않음. -->
+<main id="main-content" tabindex="-1">
+<span class="section-anchor" id="top"></span>
+<!-- Hero: The Overload -->
 <section class="scene-container is-visible pt-32" id="scene-overload">
 <div class="absolute top-32 w-full text-center">
-<span class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase">WEPLACE · FIRST SURFACE</span>
+<span class="font-editorial font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase opacity-60">WEPLACE · 2026 EDITION</span>
 </div>
 <div class="speech-bubble-mass mt-16" id="bubble-mass">
-<!-- Fragments generated via JS for positioning, but here are some hardcoded for initial load -->
-<div class="text-fragment faint" style="top: 20%; left: 10%;">최고의 서비스 제공</div>
-<div class="text-fragment medium" style="top: 30%; right: 15%;">압도적인 퀄리티 보장</div>
-<div class="text-fragment clear" style="top: 15%; left: 40%;">왜 우리를 선택해야 하는가</div>
-<div class="text-fragment afterimage" style="bottom: 40%; left: 20%;">비교불가 압도적 1위</div>
-<div class="text-fragment faint" style="top: 60%; right: 25%;">합리적인 가격 제안</div>
-<div class="text-fragment medium" style="top: 50%; left: 10%;">고객 만족도 99%</div>
-<div class="text-fragment clear" style="top: 70%; left: 35%;">혁신적인 솔루션 도입</div>
-<div class="text-fragment afterimage" style="bottom: 20%; right: 20%;">특별한 경험 제공</div>
-<h1 class="central-sentence font-headline-lg font-light">
-                    많은 말 앞에서,<br/>이해는 오히려 줄어듭니다.
-                </h1>
+<!-- Dynamic Fragments / [SCAFFOLD: aria-hidden] 장식용 과부하 텍스트는 스크린리더에서 제외 -->
+<div aria-hidden="true" class="text-fragment clear" style="top: 5%; left: 10%;">상위 노출 1위</div>
+<div aria-hidden="true" class="text-fragment faint" style="top: 15%; right: 12%;">데이터 기반 전략</div>
+<div aria-hidden="true" class="text-fragment medium" style="bottom: 20%; left: 8%;">매출 전환율 300%</div>
+<div aria-hidden="true" class="text-fragment afterimage residue" style="top: 40%; left: 5%;">BRANDING</div>
+<div aria-hidden="true" class="text-fragment clear" style="top: 25%; right: 5%;">검색 최적화 (SEO)</div>
+<div aria-hidden="true" class="text-fragment faint" style="bottom: 10%; right: 25%;">최저가 보장</div>
+<div aria-hidden="true" class="text-fragment medium" style="top: 55%; right: 20%;">AI 알고리즘 분석</div>
+<div aria-hidden="true" class="text-fragment clear" style="top: 70%; left: 15%;">퍼포먼스 마케팅</div>
+<div aria-hidden="true" class="text-fragment faint" style="top: 10%; left: 40%;">빅데이터 타겟팅</div>
+<div aria-hidden="true" class="text-fragment residue" style="bottom: 5%; left: 45%;">CLONE-DATA</div>
+<div aria-hidden="true" class="text-fragment clear" style="top: 45%; left: 65%;">#가성비맛집 #강남핫플</div>
+<div aria-hidden="true" class="text-fragment faint" style="top: 85%; right: 10%;">광고비 효율 극대화</div>
+<div aria-hidden="true" class="text-fragment medium" style="top: 30%; left: 25%;">고객 심리 분석</div>
+<div aria-hidden="true" class="text-fragment residue" style="top: 60%; right: 35%;">%%%***&amp;&amp;&amp;</div>
+<div aria-hidden="true" class="text-fragment clear" style="bottom: 25%; right: 40%;">블로그 체험단 모집</div>
+<div aria-hidden="true" class="text-fragment medium" style="top: 18%; left: 60%;">플레이스 순위 상승</div>
+<h1 class="central-sentence font-headline-lg font-light leading-tight" id="hero-center">
+                말은 남았는데<br/>뜻은 남지 않았습니다.
+            </h1>
 </div>
 </section>
 <div class="spacer"></div>
-<!-- Scene 05: The Mirror -->
-<section class="scene-container" id="scene-mirror">
-<div class="max-w-3xl text-center px-margin-mobile md:px-margin-desktop">
-<h2 class="font-headline-lg md:font-display-xl text-on-surface on-surface-text mb-8">
-                    첫 화면에서, 무엇이 남았나요?
-                </h2>
-<p class="font-body-lg text-on-surface-variant mb-16 opacity-80">
-                    정보는 많았는데 이해는 남지 않았습니다.
-                </p>
-<div class="mt-24">
-<span class="font-body-md text-on-surface-variant italic opacity-50">‘나가자.’</span>
+<!-- The Mirror -->
+<span class="section-anchor" id="recognition"></span>
+<section class="scene-container py-32" id="scene-mirror">
+<div class="max-w-4xl text-center px-margin-mobile">
+<h2 class="font-headline-lg md:font-display-xl text-on-surface mb-12">
+                첫 화면에서,<br/>무엇이 남았나요?
+            </h2>
+<p class="font-body-lg text-on-surface-variant mb-24 opacity-80 max-w-2xl mx-auto">
+                정보는 파편처럼 쏟아졌는데, 당신의 본질은 전달되지 못했습니다.
+            </p>
+<div class="mt-20">
+<span class="font-body-md text-on-surface-variant italic opacity-40">‘...나가자.’</span>
 </div>
 </div>
 </section>
 <div class="spacer"></div>
-<!-- Scene 06: Relief (Triggers Ivory Transition) -->
+<!-- Relief (Ivory Transition) -->
 <section class="scene-container" id="scene-relief">
-<div class="max-w-4xl text-left px-margin-mobile md:px-margin-desktop border-l border-outline/30 pl-8 md:pl-16 ml-4 md:ml-0 py-16 relative">
-<!-- Decorative diagnostic line -->
-<div class="absolute left-0 top-0 w-1 h-12 bg-primary-container"></div>
-<h3 class="font-headline-md md:font-headline-lg on-surface-text text-on-surface mb-12">
-                    고객도 같습니다.
-                </h3>
-<div class="space-y-8 max-w-2xl">
+<div class="max-w-4xl text-left px-margin-mobile border-l-2 border-primary-container pl-10 md:pl-20 py-24">
+<h3 class="font-headline-md md:font-headline-lg on-surface-text text-on-surface mb-16">고객도 같습니다.</h3>
+<div class="space-y-12 max-w-2xl">
 <p class="font-body-lg text-on-surface-variant on-surface-text opacity-90 leading-relaxed">
-                        매장이 부족해서가 아니라, 좋은 점을 이해하기까지 너무 많은 에너지를 쓰고 있을 수 있습니다.
-                    </p>
-<p class="font-body-lg text-on-surface-variant on-surface-text opacity-90 leading-relaxed pt-8 border-t border-outline/10">
-                        광고비를 더 쓰기 전에, 손님이 매장을 이해하는 데 쓰는 에너지를 먼저 줄입니다.
-                    </p>
+                    매장이 부족해서가 아니라, 좋은 점을 이해하기까지 너무 많은 에너지를 쓰고 있을 뿐입니다.
+                </p>
+<p class="font-body-lg text-on-surface-variant on-surface-text opacity-90 leading-relaxed pt-10 border-t border-outline/10">
+                    광고비를 더 쏟기 전에, 손님이 매장을 이해하는 데 쓰는 피로감부터 줄여야 합니다.
+                </p>
+<p class="font-headline-md text-on-surface-variant on-surface-text pt-10">
+                    정리되면, 다음에 무엇을 볼지가 보입니다.
+                </p>
 </div>
 </div>
 </section>
-<div class="spacer" style="height: 30vh;"></div>
+<div class="spacer-sm"></div>
+<!-- What We See -->
+<span class="section-anchor" id="what-we-see"></span>
+<section class="scene-container items-start py-32" id="scene-what-we-see">
+<div class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg md:font-display-xl text-on-surface on-surface-text mb-24 max-w-4xl">
+                매출이 움직이기 전에,<br/>고객이 멈추는 자리부터 봅니다.
+            </h2>
+<div class="flex flex-col w-full max-w-5xl font-headline-md text-on-surface-variant on-surface-text">
+<div class="diagnostic-list-item group">
+<span class="font-label-sm text-sm tracking-widest opacity-50 w-16">01</span>
+<span>대표사진</span>
+<span class="question">"이 사진이 매장의 첫인상을 단번에 정의하나요?"</span>
 </div>
+<div class="diagnostic-list-item group">
+<span class="font-label-sm text-sm tracking-widest opacity-50 w-16">02</span>
+<span>첫 문장</span>
+<span class="question">"수많은 설명 중 가장 먼저 읽히는 한 줄은 무엇인가요?"</span>
+</div>
+<div class="diagnostic-list-item group">
+<span class="font-label-sm text-sm tracking-widest opacity-50 w-16">03</span>
+<span>가격 체계</span>
+<span class="question">"고객이 머릿속으로 계산기를 두드리게 만들진 않나요?"</span>
+</div>
+<div class="diagnostic-list-item group">
+<span class="font-label-sm text-sm tracking-widest opacity-50 w-16">04</span>
+<span>리뷰 큐레이션</span>
+<span class="question">"단순히 많은 리뷰가 아니라, 신뢰할 만한 증언인가요?"</span>
+</div>
+<div class="diagnostic-list-item group">
+<span class="font-label-sm text-sm tracking-widest opacity-50 w-16">05</span>
+<span>위치와 맥락</span>
+<span class="question">"지도를 열기 전, '가볼 만한 곳'이라는 확신을 주나요?"</span>
+</div>
+<div class="diagnostic-list-item group">
+<span class="font-label-sm text-sm tracking-widest opacity-50 w-16">06</span>
+<span>예약의 문턱</span>
+<span class="question">"결정적인 순간에 복잡한 절차가 가로막고 있진 않나요?"</span>
+</div>
+</div>
+</div>
+</section>
+<div class="spacer-sm"></div>
+<!-- One Store, Many Surfaces -->
+<span class="section-anchor" id="surfaces"></span>
+<section class="scene-container py-32" id="scene-surfaces">
+<div class="w-full max-w-[1280px] mx-auto px-margin-mobile text-center">
+<div class="surfaces-container relative h-80 mb-32 flex justify-center items-center gap-8 md:gap-20 flex-wrap">
+<div class="surfaces-baseline"></div>
+<div class="surface-label font-headline-md text-on-surface on-surface-text opacity-70" style="transform: translateY(-80px);">Naver</div>
+<div class="surface-label font-headline-md text-on-surface on-surface-text opacity-70" style="transform: translateY(60px);">Google Maps</div>
+<div class="surface-label font-headline-md text-on-surface on-surface-text opacity-70" style="transform: translateY(-40px);">Instagram</div>
+<div class="surface-label font-headline-md text-on-surface on-surface-text opacity-70" style="transform: translateY(90px);">Brand Site</div>
+<div class="surface-label font-headline-md text-on-surface on-surface-text opacity-70" style="transform: translateY(-100px);">AI Search</div>
+</div>
+<div class="max-w-3xl mx-auto space-y-8 text-left md:text-center transition-opacity duration-1000 opacity-0" id="surfaces-text">
+<p class="font-body-lg text-on-surface-variant on-surface-text">고객에게는 이 모든 것이 '하나의 매장'입니다.</p>
+<p class="font-body-lg text-on-surface-variant on-surface-text">화면마다 다른 메시지는 고객의 판단 에너지를 낭비하게 합니다.</p>
+<h3 class="font-headline-lg text-on-surface on-surface-text mt-12">흩어진 정보를 하나의 매장처럼 읽히게 맞춥니다.</h3>
+</div>
+</div>
+</section>
+<!-- Featured Case (Seolmajung) -->
+<span class="section-anchor" id="featured-case"></span>
+<section class="scene-container py-32 overflow-hidden" id="scene-featured">
+<div class="w-full max-w-[1280px] mx-auto px-margin-mobile">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2 aspect-[4/5] bg-surface-container-high relative group overflow-hidden">
+<!-- Image Placeholder / Fallback Gradient -->
+<div class="absolute inset-0 bg-gradient-to-tr from-[#1a1209] to-[#3d3329]">
+<img alt="Seolmajung" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000" onerror="this.style.display='none'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKBV7X2nSlB2tPr7rMCkA9NS5kHY6uEw4I0UO2BH7SxloXvqcTwiH5Ik3Txf5mXQ91n3bRdleOamlZ24guBTTQk3GwTNsRk_EFTkJ5gKSMglg5a_V4qxZDQzQ2om6QRo-umc_atWGTB4rXxMfEdWowG86OXqkhpzDlhV_SlCnXAxrQe6UM4633nvhinVHBhrqsnIVhhuX230c-fMLs0y5D84TxF1WDCA1mF82fT2igshQGQ6qhudbW8tMI99ZR5CGdVQZ6bbANn3Q"/>
+</div>
+<div class="absolute inset-0 border-[20px] border-background/20 pointer-events-none"></div>
+<div class="absolute top-10 left-10">
+<span class="font-editorial font-label-sm tracking-widest text-primary bg-background px-4 py-1">FEATURED CASE 01</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col justify-center">
+<h2 class="font-display-xl-mobile md:font-display-xl text-on-surface mb-12">설마중</h2>
+<p class="font-body-lg text-on-surface-variant mb-16">중요한 식사 자리의 무게를 첫 화면에 담아내다.</p>
+<div class="space-y-12">
+<div class="border-l border-primary/30 pl-8">
+<h4 class="font-label-sm uppercase tracking-widest text-primary mb-2">01 처음 보이는 화면</h4>
+<p class="on-surface-text">한식 다이닝의 정갈함과 '품격 있는 환대'의 시각적 언어를 최상단에 배치.</p>
+</div>
+<div class="border-l border-primary/30 pl-8">
+<h4 class="font-label-sm uppercase tracking-widest text-primary mb-2">02 고객이 멈추던 지점</h4>
+<p class="on-surface-text">프라이빗 룸의 유무와 주차 편의성 등 실제 예약 결정 요인을 최우선 노출.</p>
+</div>
+<div class="border-l border-primary/30 pl-8">
+<h4 class="font-label-sm uppercase tracking-widest text-primary mb-2">03 먼저 바꾼 순서</h4>
+<p class="on-surface-text">복잡한 메뉴판을 코스별 직관적 스토리로 재구성하여 예약 전환율 개선.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Archive Index -->
+<span class="section-anchor" id="case-archive"></span>
+<section class="scene-container items-start py-32 relative" id="scene-archive">
+<div id="archive-bg"></div>
+<div class="w-full max-w-[1280px] mx-auto px-margin-mobile z-10">
+<h2 class="font-editorial font-label-sm tracking-widest text-on-surface-variant uppercase mb-20 opacity-60">Archive</h2>
+<div class="archive-list flex flex-col gap-0">
+<div class="archive-item group cursor-pointer py-10 border-t border-outline/10 transition-all duration-500" data-bg="img/archive-seolmajung">
+<div class="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12">
+<span class="font-display-xl-mobile md:font-headline-lg text-on-surface group-hover:text-primary transition-colors">01 Seolmajung</span>
+<p class="font-body-md text-on-surface-variant opacity-70 group-hover:opacity-100 transition-opacity">대표 사례 / 중요한 식사 자리 / 신뢰의 표면</p>
+</div>
+</div>
+<div class="archive-item group cursor-pointer py-10 border-t border-outline/10 transition-all duration-500" data-bg="img/archive-luwei">
+<div class="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12">
+<span class="font-display-xl-mobile md:font-headline-lg text-on-surface group-hover:text-primary transition-colors">02 Luwei</span>
+<p class="font-body-md text-on-surface-variant opacity-70 group-hover:opacity-100 transition-opacity">분위기와 감각 / 시각적 몰입의 표면</p>
+</div>
+</div>
+<div class="archive-item group cursor-pointer py-10 border-t border-outline/10 transition-all duration-500" data-bg="img/archive-rangex">
+<div class="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12">
+<span class="font-display-xl-mobile md:font-headline-lg text-on-surface group-hover:text-primary transition-colors">03 Range-X</span>
+<p class="font-body-md text-on-surface-variant opacity-70 group-hover:opacity-100 transition-opacity">숫자와 데이터 / 운영 흐름의 효율적 표면</p>
+</div>
+</div>
+<div class="archive-item group cursor-pointer py-10 border-y border-outline/10 transition-all duration-500" data-bg="img/archive-nanda">
+<div class="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12">
+<span class="font-display-xl-mobile md:font-headline-lg text-on-surface group-hover:text-primary transition-colors">04 Nanda Aroma</span>
+<p class="font-body-md text-on-surface-variant opacity-70 group-hover:opacity-100 transition-opacity">구축 과정 / 브랜드가 태어나는 표면</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Gate: Webtoon & Essay -->
+<span class="section-anchor" id="content-gateway"></span>
+<section class="scene-container py-0" id="scene-gate">
+<div class="w-full flex flex-col md:flex-row h-full">
+<div class="gate-card group bg-surface-container-low border-r border-outline/5">
+<span class="font-editorial font-label-sm tracking-[0.3em] text-on-surface-variant mb-6 uppercase">Perspective 01</span>
+<h3 class="font-headline-lg text-on-surface mb-8">Webtoon</h3>
+<p class="font-body-md text-on-surface-variant mb-12 opacity-70 group-hover:opacity-100 px-12 text-center">진단 현장을 만화로 풀다.</p>
+<a class="px-8 py-3 border border-primary text-primary hover:bg-primary hover:text-background transition-all font-label-sm uppercase tracking-widest" href="/webtoon/">Explore</a>
+</div>
+<div class="gate-card group bg-surface-container-lowest">
+<span class="font-editorial font-label-sm tracking-[0.3em] text-on-surface-variant mb-6 uppercase">Perspective 02</span>
+<h3 class="font-headline-lg text-on-surface mb-8">Essay</h3>
+<p class="font-body-md text-on-surface-variant mb-12 opacity-70 group-hover:opacity-100 px-12 text-center">깊이 있는 텍스트로 읽는 본질.</p>
+<a class="px-8 py-3 border border-primary text-primary hover:bg-primary hover:text-background transition-all font-label-sm uppercase tracking-widest" href="/essay/">Read More</a>
+</div>
+</div>
+</section>
+<!-- One-Page Diagnosis (Advanced Report Style) -->
+<span class="section-anchor" id="diagnosis-preview"></span>
+<section class="scene-container py-32" id="scene-diagnosis">
+<div class="w-full max-w-[1280px] mx-auto px-margin-mobile flex flex-col items-center">
+<h2 class="font-headline-lg text-on-surface mb-24 text-center max-w-4xl">
+                매장 화면을 열어보고,<br/>고객이 멈출 지점과 먼저 손볼 순서를 표시합니다.
+            </h2>
+<div class="w-full max-w-4xl bg-white/5 border border-outline/20 p-12 md:p-20 shadow-2xl relative overflow-hidden transition-all duration-700 backdrop-blur-sm">
+<div class="flex justify-between items-start mb-16 border-b border-outline/20 pb-8">
+<div>
+<h3 class="font-editorial font-label-sm text-sm tracking-widest text-primary uppercase mb-2">WEPLACE FIRST SURFACE DIAGNOSIS</h3>
+<p class="text-on-surface-variant font-body-md opacity-60">Status: Analysis Pending</p>
+</div>
+<div class="text-right">
+<span class="font-editorial font-label-sm text-xs opacity-40">REF. NO. 2026-DX-042</span>
+</div>
+</div>
+<div class="space-y-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-3">
+<h4 class="font-headline-md text-on-surface mb-4">01 시각적 언어 정렬</h4>
+<p class="font-body-md text-on-surface-variant opacity-80 leading-relaxed">대표 사진과 메인 카피의 톤이 충돌하여 고객의 인지 부하를 높이고 있습니다. 단일한 테마로의 정리가 시급합니다.</p>
+</div>
+<div class="flex items-center justify-end">
+<span class="px-4 py-2 border border-[#93000a] text-[#ffdad6] font-label-sm text-[10px] uppercase tracking-widest bg-[#93000a]/20">보완 필요</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-3">
+<h4 class="font-headline-md text-on-surface mb-4">02 정보 위계 재설정</h4>
+<p class="font-body-md text-on-surface-variant opacity-80 leading-relaxed">영업 시간, 가격 등 기초 정보가 산재되어 있습니다. 고객이 '탐색' 대신 '결정'에 집중하도록 배치 순서를 조정합니다.</p>
+</div>
+<div class="flex items-center justify-end">
+<span class="px-4 py-2 border border-[#c49a5a] text-[#ffddaf] font-label-sm text-[10px] uppercase tracking-widest bg-[#c49a5a]/20">확인 필요</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-3">
+<h4 class="font-headline-md text-on-surface mb-4">03 전환 포인트 최적화</h4>
+<p class="font-body-md text-on-surface-variant opacity-80 leading-relaxed">예약 버튼까지의 거리가 적절하며, 모바일 UI에서의 접근성이 양호합니다. 현재의 흐름을 유지하며 디테일만 보강합니다.</p>
+</div>
+<div class="flex items-center justify-end">
+<span class="px-4 py-2 border border-[#2e4d2a] text-[#c9e8c3] font-label-sm text-[10px] uppercase tracking-widest bg-[#2e4d2a]/20">양호</span>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-12 border-t border-outline/10 flex flex-col md:flex-row justify-between items-center gap-8">
+<p class="font-label-sm text-primary-container tracking-widest uppercase">Implementation: Within 48 Hours</p>
+<button class="px-10 py-3 bg-primary text-background font-label-sm uppercase tracking-widest font-bold">Download Full Sample</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Threshold -->
+<span class="section-anchor" id="contact"></span>
+<section class="scene-container charcoal-theme py-48" id="scene-final">
+<div class="max-w-4xl text-center px-margin-mobile">
+<h2 class="font-display-xl-mobile md:font-display-xl mb-16 text-on-surface">정리 안 돼도 됩니다.</h2>
+<p class="font-body-lg text-on-surface-variant mb-24 opacity-80">
+                그 정리를 저희가 합니다. 당신은 본질에 집중하세요.<br/>
+                첫 화면이 바뀌면, 비로소 고객의 마음이 보이기 시작합니다.
+            </p>
+<a class="inline-flex items-center gap-4 px-12 py-5 border-2 border-primary text-primary hover:bg-primary hover:text-background transition-all duration-500 font-label-sm uppercase tracking-[0.2em] group" href="/diagnosis/request/">
+                Start Diagnosis
+                <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
 <!-- Footer -->
-<footer class="w-full py-section-gap px-margin-desktop bg-surface-container-lowest border-t border-outline/10 flex flex-col md:flex-row justify-between items-center gap-gutter transition-colors duration-1000" id="footer">
-<div class="font-headline-md text-headline-md text-on-surface on-surface-text opacity-80 hover:opacity-100 transition-opacity">Weplace</div>
-<div class="flex flex-wrap gap-6 justify-center">
-<a class="font-label-sm text-label-sm text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="font-label-sm text-label-sm text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
-<a class="font-label-sm text-label-sm text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">Ethical Framework</a>
+<footer class="w-full py-32 px-margin-desktop bg-surface-container-lowest border-t border-outline/5 transition-colors duration-1000" id="footer">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-16">
+<div>
+<div class="font-headline-md text-3xl text-on-surface opacity-70 hover:opacity-100 transition-opacity mb-4">Weplace</div>
+<p class="text-on-surface-variant font-label-sm opacity-40">THE DIAGNOSTIC STUDIO FOR FIRST SURFACES.</p>
 </div>
-<div class="font-label-sm text-label-sm text-tertiary">
-            © 2025 Weplace. The Diagnostic Studio.
+<div class="flex flex-wrap gap-12">
+<a class="font-label-sm text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase" href="#">Privacy</a>
+<a class="font-label-sm text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase" href="#">Terms</a>
+<a class="font-label-sm text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase" href="#">Ethics</a>
+</div>
+<div class="font-label-sm text-tertiary/40 tracking-wider">
+            © 2026 Weplace. ALL RIGHTS RESERVED.
         </div>
+</div>
 </footer>
 <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const scenes = document.querySelectorAll('.scene-container');
-            const body = document.body;
-            const sceneRelief = document.getElementById('scene-relief');
-            const bubbleMass = document.getElementById('bubble-mass');
+    document.addEventListener('DOMContentLoaded', () => {
+        const scenes = document.querySelectorAll('.scene-container');
+        const body = document.body;
+        const heroCenter = document.getElementById('hero-center');
+        const surfacesContainer = document.querySelector('.surfaces-container');
+        const surfacesText = document.getElementById('surfaces-text');
+        
+        // Mobile Menu Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-overlay');
+        
+        menuToggle.onclick = () => mobileMenu.classList.add('open');
+        menuClose.onclick = () => mobileMenu.classList.remove('open');
 
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.3
-            };
+        const observerOptions = {
+            threshold: 0.2
+        };
 
-            const sceneObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        
-                        // Handle Theme Transition
-                        if (entry.target.id === 'scene-relief') {
-                            body.classList.add('ivory-theme');
-                        } else if (entry.target.id === 'scene-mirror' || entry.target.id === 'scene-overload') {
-                            body.classList.remove('ivory-theme');
-                        }
-
-                        // Animate Bubble contraction
-                        if (entry.target.id === 'scene-mirror' && bubbleMass) {
-                            bubbleMass.style.transform = 'scale(0.8)';
-                            bubbleMass.style.opacity = '0';
-                        }
+        const sceneObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    
+                    // Theme Transitions
+                    const id = entry.target.id;
+                    if (['scene-relief', 'scene-what-we-see', 'scene-surfaces', 'scene-featured', 'scene-archive', 'scene-diagnosis'].includes(id)) {
+                        body.classList.add('ivory-theme');
+                        body.classList.remove('charcoal-theme');
+                    } else if (id === 'scene-final') {
+                        body.classList.add('charcoal-theme');
+                        body.classList.remove('ivory-theme');
                     } else {
-                        // Reset bubble when scrolling up
-                        if (entry.target.id === 'scene-mirror' && entry.boundingClientRect.y > 0 && bubbleMass) {
-                            bubbleMass.style.transform = 'scale(1)';
-                            bubbleMass.style.opacity = '1';
-                        }
+                        body.classList.remove('ivory-theme', 'charcoal-theme');
                     }
-                });
-            }, observerOptions);
 
-            scenes.forEach(scene => {
-                sceneObserver.observe(scene);
-            });
+                    // Hero Animation
+                    if (id === 'scene-overload') {
+                        heroCenter.classList.add('active');
+                    }
 
-            // Parallax effect for text fragments
-            window.addEventListener('scroll', () => {
-                const scrolled = window.scrollY;
-                if (scrolled < window.innerHeight) {
-                    const fragments = document.querySelectorAll('.text-fragment');
-                    fragments.forEach((frag, index) => {
-                        const speed = (index % 3 + 1) * 0.1;
-                        frag.style.transform = `translateY(${scrolled * speed}px)`;
-                    });
+                    // Surfaces Animation
+                    if (id === 'scene-surfaces') {
+                        surfacesContainer.classList.add('is-aligned');
+                        setTimeout(() => {
+                            surfacesText.style.opacity = '1';
+                        }, 1200);
+                    }
                 }
             });
+        }, observerOptions);
+
+        scenes.forEach(scene => sceneObserver.observe(scene));
+
+        // Archive Background Effect
+        const archiveItems = document.querySelectorAll('.archive-item');
+        const archiveBg = document.getElementById('archive-bg');
+        
+        archiveItems.forEach(item => {
+            item.onmouseenter = () => {
+                const bg = item.getAttribute('data-bg');
+                archiveBg.style.backgroundImage = `url(${bg}.jpg)`;
+                archiveBg.style.opacity = '0.4';
+            };
+            item.onmouseleave = () => {
+                archiveBg.style.opacity = '0';
+            };
         });
-    </script>
+
+        // Hero Parallax Noise
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            if (scrolled < window.innerHeight * 1.2) {
+                const fragments = document.querySelectorAll('.text-fragment');
+                fragments.forEach((frag, index) => {
+                    const speed = (index % 6 + 1) * 0.12;
+                    const rotation = (index % 10 - 5) * 0.5;
+                    frag.style.transform = `translateY(${scrolled * speed}px) rotate(${rotation}deg)`;
+                });
+            }
+        });
+    });
+</script>
 </body></html>
